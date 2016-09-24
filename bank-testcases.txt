@@ -1,0 +1,43 @@
+dhp62 
+sp1301
+Assignment4
+
+test0: basic account mechanics
+- add account and make sure server prints out data
+- close client and make sure server prints out data
+- reopen session and modify same account and make sure server prints out data
+- open another session and attempt to modify server - server denies this
+- modify account again in the first client and make sure server prints out data
+- close first client
+- start same account in second session
+- check the balance of the account and make sure its the same as before
+- edit account and make sure server prints out data 
+- close client
+- close server
+
+test1: bank capacities
+- add 20 accounts from one client and make sure server prints out data 
+- add another account and receive failure message from server
+- add 19 clients to associate to each account
+- credit and debit with various accounts and make sure server prints out data
+- close server - clients close
+
+test2: simple server
+- create server - dont make any clients and wait 20 seconds to make sure server prints out nothing
+- close server
+
+test3: check server functions
+- create server
+- create clients 1 and 2
+- client 1 opens account
+- client 2 opens another account
+- client 1 and 2 credit, debit, and balance waiting 20 seconds between each to see output
+- client 1 finishes and opens a 3rd account and credits, debits, and balances - first account shouldnt change, watch the others change
+- client 1 and 2 finish
+- server exits
+
+test4: 100 character limit
+- create server
+- create client 1
+- client 1 opens account with a name over 100 characters - server denies this
+- server exits - clients close
